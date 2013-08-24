@@ -25,8 +25,8 @@
 
 (defroutes routes
   (GET "/" [] "<h2>Hello World</h2>")
-  (GET "/index" [] (index "parametar")
-  (GET "/first" [email pass] (first-page email pass))))
+  (GET "/index" [] (index "parametar"))
+  (GET "/first" [email pass] (first-page email pass)))
 
 ;I used dispetcher function instead of compojure's function defroutes
 ;(defn dispetcher [req]
