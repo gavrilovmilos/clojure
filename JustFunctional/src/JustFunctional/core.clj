@@ -15,7 +15,7 @@
 ;(defn page-def-head [title] ([:head
 ;									      [:title title] (include-css "/css/layout.css")]))
 
-
+;cloustache template
 (defn read-template [template-name] 
   (slurp (clojure.java.io/resource 
            (str "templates/" template-name ".mustache"))))
@@ -23,11 +23,13 @@
 (defn render-template [template-file params]
   (clostache/render (read-template template-file) params))
 
+;cloustache page with index template
 (defn clos-page [] (render-template "index" {:greeting "Ciao djaci"}))
 
+;random index page
 (defn index [par1] (html5
 									    [:head
-									      [:title "JustFunctional"] (include-css "/public/css/layout.css")]
+									      [:title "JustFunctional"] (include-css "public/css/layout.css")]
 									    [:body
 									      [:div {:id "content"} (str "Index page > " par1)]
                [:div {:id "content2"} 
