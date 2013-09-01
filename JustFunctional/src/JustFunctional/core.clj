@@ -12,6 +12,10 @@
               [clostache.parser :as clostache]
              ))
 
+;user
+(def ^:dynamic active-user {:user-name "" :password ""})
+
+
 ;(defn page-def-head [title] ([:head
 ;									      [:title title] (include-css "/css/layout.css")]))
 
@@ -40,17 +44,21 @@
 	                (password-field "password" "password")
 	                (submit-button {:id "loginButton"} "Log in")]]]))
 
-(defn first-page [email pass] (str "Welcome: " email pass))
+(defn first-page [email pass] 
+  (do (println email) (str "Welcome: " email pass)))
+
 (defn log-in [params] (str "Home page " params))
+
 
 (defroutes routes
   (GET "/" [] "<h2>Hello World</h2>")
   (GET "/index" [] (index "parametar"))
   (GET "/first" [email pass] (first-page email pass))
   (GET "/clos" [] (clos-page))
-  (POST "/home" params (log-in params))
+  (GET "/home" params (first-page (get params :email) (get params :password)))
   (route/resources "/")
   (route/not-found "404 Page Not Found"))
 
 
-(defn server [] (run-jetty #'routes {:port 8080}))
+
+(defn server [] (run-jetty #'routes {:port 8081}))
