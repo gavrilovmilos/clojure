@@ -55,7 +55,7 @@
   (GET "/index" [] (index "parametar"))
   (GET "/first" [email pass] (first-page email pass))
   (GET "/clos" [] (clos-page))
-  (GET "/home" params (first-page (get params :email) (get params :password)))
+  (POST "/home" params (first-page (get params :email) (get params :password)))
   (route/resources "/")
   (route/not-found "404 Page Not Found"))
 
