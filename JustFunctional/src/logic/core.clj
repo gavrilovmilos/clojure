@@ -1,4 +1,4 @@
-(ns JustFunctional.core
+(ns logic.core
     (:use [hiccup.page :only (html5)]
           [hiccup.form]
           [hiccup.page :only [include-css]]
