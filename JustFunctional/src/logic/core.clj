@@ -3,12 +3,13 @@
           [hiccup.form]
           [hiccup.page :only [include-css]]
           [compojure.core :only (defroutes GET POST)]
-          
+          [ring.middleware.params :only [wrap-params]]
           [ring.adapter.jetty]
           [clojure.string]
           )
     (:require [compojure.route :as route]
               ; [clostache.route :as route]
+              [compojure.handler :as handler]
               [clostache.parser :as clostache]
              ))
 
@@ -55,10 +56,11 @@
   (GET "/index" [] (index "parametar"))
   (GET "/first" [email pass] (first-page email pass))
   (GET "/clos" [] (clos-page))
-  (POST "/home" params (first-page (get params :email) (get params :password)))
+  (POST "/home" [email password] (first-page email password))
   (route/resources "/")
   (route/not-found "404 Page Not Found"))
 
 
+(def app (wrap-params routes))
 
-(defn server [] (run-jetty #'routes {:port 8081}))
+(defn server [] (run-jetty app {:port 8081}))
