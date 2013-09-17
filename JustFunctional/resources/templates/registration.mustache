@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clos logger</title>
+        <link rel="stylesheet" type="text/css" href="/css/layout.css">
+        {{ header }}
+    </head>
+    <body>
+        <div class="container">
+           <h1>{{ greeting }}</h1>
+           <form name="input" action="/index" method="post">
+	          <div>
+	            <label for="name" class="grid">Name:</label>
+	            <input type="text" class="inputtext" name="name" value=""/>         
+	          </div>
+	          <div> 
+	            <label for="surname" class="grid">Surname:</label>
+	            <input type="text" class="inputtext" name="surname"/>
+	          </div> 
+	          <div>
+	            <label for="email" class="grid">Email:</label>
+	            <input type="text" class="inputtext" name="email" id="email" value=""/>         
+	          </div>
+	          <div> 
+	            <label for="password" class="grid">Password:</label>
+	            <input type="password" class="inputtext" name="password" id="password"/>
+	          </div> 
+	          <div>
+	             
+	             <input type="submit" class="button" value="Register"/>
+	          </div>   
+          </form>        
+        </div>
+        <div id="footerContainer">
+         {{ footer }}
+        </div>
+    </body>
+</html>

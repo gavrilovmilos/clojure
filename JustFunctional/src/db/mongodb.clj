@@ -16,4 +16,7 @@
       ^ServerAddress sa  (mg/server-address "127.0.0.1" 27017)]
   (mg/connect! sa opts))
 
-(mc/insert "documents" {:first_name "John"  :last_name "Lennon"})
+;(mc/insert "documents" {:first_name "John"  :last_name "Lennon"})
+(defn save-user [name surname email password] 
+  (mc/insert "users" 
+             {:name name :surname surname :email email :password password}))

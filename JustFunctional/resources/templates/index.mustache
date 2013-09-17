@@ -3,24 +3,18 @@
     <head>
         <title>Clos logger</title>
         <link rel="stylesheet" type="text/css" href="/css/layout.css">
+        <script src="/js/main.js"></script>
+        {{ header }}
     </head>
     <body>
         <div class="container">
-           <h1>{{ greeting }}</h1>
-           <form name="input" action="/home" method="post">
-	          <div>
-	            <label for="email" class="grid">Email:</label>
-	            <input type="text" class="inputtext" name="email" id="email" value=""/>         
-	          </div>
-	          <div> 
-	            <label for="password" class="grid">Password:</label>
-	            <input type="password" class="inputtext" name="password" id="password"/>
-	          </div> 
-	          <div>
-	             
-	             <input type="submit" class="button" value="Log in" id="logIN"/>
-	          </div>   
-          </form>        
+
+		        <a href="/login">Log in</a>
+		        <a href="/register">Register</a>
+
+        </div>
+        <div id="footerContainer">
+         {{ footer }}
         </div>
     </body>
 </html>
