@@ -1,4 +1,5 @@
 (ns db.mongodb
+  (:use [monger.conversion :only [from-db-object]])
   (:require [monger.core :as mg]
             [monger.collection :as mc])
   (:import [com.mongodb MongoOptions ServerAddress]))
@@ -18,5 +19,10 @@
 
 ;(mc/insert "documents" {:first_name "John"  :last_name "Lennon"})
 (defn save-user [name surname email password] 
-  (mc/insert "users" 
-             {:name name :surname surname :email email :password password}))
+  (mc/insert "users"                       
+             {:_id email :name name 
+              :surname surname :password password}))
+
+(defn log-in [email password] 
+  (mc/find-maps "users" {:_id email :password password}))
+
