@@ -3,9 +3,10 @@
     <head>
         <title>Just-Functional</title>
         <link rel="stylesheet" type="text/css" href="/css/layout.css">
-        {{ header }}
+        
     </head>
     <body>
+    {{>header}}
         <div class="container">
            <h1>{{ greeting }}</h1>
            <form name="input" action="/user-home" method="post">

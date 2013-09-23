@@ -6,10 +6,8 @@
           [ring.middleware.params :only [wrap-params]]
           [ring.adapter.jetty]
           [clojure.string]
-          [db.mongodb :as db]
-          )
+          [db.mongodb :as db])
     (:require [compojure.route :as route]
-              ; [clostache.route :as route]
               [compojure.handler :as handler]
               [clostache.parser :as clostache]
              ))
@@ -34,17 +32,18 @@
 (defn just-error-handler [log-message page-message] 
   (do (println log-message) (render-template "error" {:error-message page-message})))
 
-(defn index-page [] (render-template "index" {} ))
+(defn index-page [] (render-template "index" {:header (read-component "header") } ))
 
 ;cloustache login page with index template
-(defn login-page [] (render-template "authentication" {:header (read-component "header") :greeting "<h1>Ciao djaci</h1>"}))
+(defn login-page [] (render-template "authentication" {:header (read-component "header") :greeting "Ciao djaci"}))
 
 (defn register-page[] (render-template "registration" {:greeting "Ciao djaci"}))
 
 (defn logging [email pass] 
   (do (println email) 
     (let [logged-user (db/log-in email pass)]
-      (render-template "home" {:name (get logged-user :password)}))))
+      (do (println (str "Logged user: " (:_id logged-user))) 
+        (render-template "home" {:name (:_id logged-user)}) ))))
 
 (defn registration [name surname email password] 
   (try (do (println name) 

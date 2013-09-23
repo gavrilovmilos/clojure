@@ -4,18 +4,15 @@
         <title>Just-Functional</title>
         <link rel="stylesheet" type="text/css" href="/css/layout.css">
         <script src="/js/main.js"></script>
-        
+        {{ header }}
     </head>
     <body>
-    {{header}}
         <div class="container">
-
-		        <a href="/log-in">Log in</a>
-		        <a href="/register">Register</a>
+			Welcome {{ name }} !!!
 
         </div>
         <div id="footerContainer">
-         {{>footer}}
+         {{ footer }}
         </div>
     </body>
 </html>

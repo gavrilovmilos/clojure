@@ -24,5 +24,6 @@
               :surname surname :password password}))
 
 (defn log-in [email password] 
-  (mc/find-maps "users" {:_id email :password password}))
+  (do (println (str "ns: mongodb, Login function, user email: " email))
+    (mc/find-maps "users" {:_id email :password password})))
 
