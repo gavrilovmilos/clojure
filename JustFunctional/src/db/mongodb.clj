@@ -25,5 +25,5 @@
 
 (defn log-in [email password] 
   (do (println (str "ns: mongodb, Login function, user email: " email))
-    (mc/find-maps "users" {:_id email :password password})))
+    (mc/find-one-as-map "users" {:_id email :password password})))
 

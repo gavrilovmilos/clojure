@@ -43,7 +43,7 @@
   (do (println email) 
     (let [logged-user (db/log-in email pass)]
       (do (println (str "Logged user: " (:_id logged-user))) 
-        (render-template "home" {:name (:_id logged-user)}) ))))
+        (render-template "home" {:name (:surname logged-user)}) ))))
 
 (defn registration [name surname email password] 
   (try (do (println name) 
