@@ -6,7 +6,8 @@
           [ring.middleware.params :only [wrap-params]]
           [ring.adapter.jetty]
           [clojure.string]
-          [db.mongodb :as db])
+          [db.mongodb :as db]
+          [common.config])
     (:require [compojure.route :as route]
               [compojure.handler :as handler]
               [clostache.parser :as clostache]
@@ -53,7 +54,7 @@
 
 (defroutes routes
   (GET "/" [] "<h2>Hello World</h2>")
-  (GET "/index" [] (index-page ))
+  (GET "/index" [] (index-page))
   (GET "/log-in" [] (login-page))
   (GET "/register" [] (register-page))
   (POST "/index" [name surname email password] (registration name surname email password))
@@ -64,4 +65,4 @@
 
 (def app (wrap-params routes))
 
-(defn server [] (run-jetty app {:port 8081}))
+(defn server [] (run-jetty app {:port (get-config-prop :port "true")}))
