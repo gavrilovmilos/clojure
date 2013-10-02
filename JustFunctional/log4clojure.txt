@@ -1,0 +1,10 @@
+2013-10-02 23:09:12 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-02 23:09:12 [INFO] Logged user: gavrilovmilos@yahoo.com
+2013-10-02 23:15:59 [INFO] Trying to register user with e-mail: gavrilovmilos@yahoo.com
+2013-10-02 23:15:59 [ERROR] { "serverUsed" : "/127.0.0.1:27017" , "err" : "E11000 duplicate key error index: justdb.users.$_id_  dup key: { : \"gavrilovmilos@yahoo.com\" }" , "code" : 11000 , "n" : 0 , "connectionId" : 4 , "ok" : 1.0}
+2013-10-02 23:17:29 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-02 23:17:29 [INFO] Logged user: gavrilovmilos@yahoo.com
+2013-10-02 23:18:51 [INFO] Trying to register user with e-mail: anci12_kg@hotmail.com
+2013-10-02 23:38:17 [INFO] Trying to log in user with e-mail: anci12_kg@hotmail.com
+2013-10-02 23:38:17 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-02 23:38:17 [INFO] Logged user with emailgavrilovmilos@yahoo.com

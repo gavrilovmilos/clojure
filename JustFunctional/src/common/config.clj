@@ -6,16 +6,16 @@
 ;  (:import java.io.FileInputStream)
   )
 
-;1. pokudsj ucitavanja fajla koristeci javine metode
+;Reading properties file using Java methods
 ;(defn load-props [file-name]
 ;  (let [props Properties]
 ;    (.load props (new java.io.FileInputStream file-name))))
 ;
 ;(defn read [] (load-props "resources/config.properties"))
 
-;2. koriscenjem propertea biblioteke
+;Reading properties file using propertea project
 (def config-props (read-properties "resources/config.properties"))
 
-(defn get-config-prop [prop-name is-number] 
+(defn get-config-prop [prop-name & [is-number]] 
   (if is-number (read-string (get config-props prop-name))
     (get config-props prop-name)))

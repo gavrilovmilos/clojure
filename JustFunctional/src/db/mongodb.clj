@@ -1,6 +1,7 @@
 (ns db.mongodb
   (:use [monger.conversion :only [from-db-object]]
-        [common.config])
+        [common.config]
+        [common.mylogger])
   (:require [monger.core :as mg]
             [monger.collection :as mc])
   (:import [com.mongodb MongoOptions ServerAddress]))
@@ -16,13 +17,12 @@
                            (get-config-prop :db_address) (get-config-prop :db_port true))]
   (mg/connect! sa opts))
 
-;(mc/insert "documents" {:first_name "John"  :last_name "Lennon"})
 (defn save-user [name surname email password] 
   (mc/insert "users"                       
              {:_id email :name name 
               :surname surname :password password}))
 
 (defn log-in [email password] 
-  (do (println (str "ns: mongodb, Login function, user email: " email))
+  (do (just-log "INFO" (str "ns: mongodb, Login function, user email: " email))
     (mc/find-one-as-map "users" {:_id email :password password})))
 

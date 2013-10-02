@@ -7,7 +7,8 @@
           [ring.adapter.jetty]
           [clojure.string]
           [db.mongodb :as db]
-          [common.config])
+          [common.config]
+          [common.mylogger])
     (:require [compojure.route :as route]
               [compojure.handler :as handler]
               [clostache.parser :as clostache]
@@ -31,25 +32,30 @@
   (clostache/render (read-template template-file) params))
 
 (defn just-error-handler [log-message page-message] 
-  (do (println log-message) (render-template "error" {:error-message page-message})))
+  (do (just-log "ERROR" log-message) (render-template "error" {:error-message page-message})))
 
-(defn index-page [] (render-template "index" {:header (read-component "header") } ))
+(defn index-page [] 
+  (render-template "index" {:header (read-component "header") } ))
 
 ;cloustache login page with index template
-(defn login-page [] (render-template "authentication" {:header (read-component "header") :greeting "Ciao djaci"}))
+(defn login-page [] 
+  (render-template "authentication" {:header (read-component "header") :greeting (get-config-prop :log_in_message)}))
 
-(defn register-page[] (render-template "registration" {:greeting "Ciao djaci"}))
+(defn register-page[] 
+  (render-template "registration" {:greeting (get-config-prop :register_message)}))
 
 (defn logging [email pass] 
-  (do (println email) 
+  (do (just-log "INFO" (str "Trying to log in user with email: " email)) 
     (let [logged-user (db/log-in email pass)]
-      (do (println (str "Logged user: " (:_id logged-user))) 
+      (do (just-log "INFO" (str "Logged user with email" (:_id logged-user))) 
         (render-template "home" {:name (:surname logged-user)}) ))))
 
 (defn registration [name surname email password] 
-  (try (do (println name) 
-           (db/save-user name surname email password) (render-template "index" {:message "Registration success! Welcome" :name name}))
-    (catch Exception e (just-error-handler (.getMessage e) "An error ocured while registering user!") )))
+  (try (do (just-log "INFO" (str "Trying to register user with e-mail: " email)) 
+           (db/save-user name surname email password) 
+           (just-log "INFO" (str "Successfully registered user with e-mail: " email))
+           (render-template "index" {:message "Registration success! Welcome" :name name}))
+    (catch Exception e (just-error-handler (.getMessage e) "An error ocured while trying to registerer user!") )))
 
 
 (defroutes routes
