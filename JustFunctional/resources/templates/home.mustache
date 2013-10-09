@@ -8,8 +8,16 @@
     </head>
     <body>
         <div class="container">
-			Welcome {{ name }} !!!
-
+			{{#greet}} Welcome {{name}} !!! {{/greet}} 
+			
+			<div class="search">
+				<form name="input" action="/search" method="post">
+					<label for="search" class="grid">Search word:</label>
+					<input type="text" class="inputtext" name="search-word" value=""/> 
+					<input type="submit" class="button" value="Search"/>					
+				</form>
+				{{ result }}
+			</div>
         </div>
         <div id="footerContainer">
          {{ footer }}

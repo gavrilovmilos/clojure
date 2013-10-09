@@ -48,3 +48,12 @@
 ;                          )
                           inner-index-map))))        
         index-map))))
+
+(defn simple-search [word] 
+  (filter (fn [x] (= (first x) word)) (seq (index "resources/content/text.txt"))))
+
+(defn formatted-search [word]
+  (try (str "Search word FOUND in rows: " (nth (nth (simple-search word) 0) 1))
+    (catch IndexOutOfBoundsException e (str "Search word is not found!!!"))))
+
+;(seq (index "resources/content/text.txt"))

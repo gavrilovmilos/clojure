@@ -8,3 +8,89 @@
 2013-10-02 23:38:17 [INFO] Trying to log in user with e-mail: anci12_kg@hotmail.com
 2013-10-02 23:38:17 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
 2013-10-02 23:38:17 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 20:16:05 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 20:16:05 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 20:16:05 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 20:16:14 [INFO] Trying to log in user with email: 
+2013-10-09 20:16:14 [INFO] ns: mongodb, Login function, user email: 
+2013-10-09 20:16:14 [INFO] Logged user with email
+2013-10-09 20:17:12 [INFO] Trying to log in user with email: 
+2013-10-09 20:17:12 [INFO] ns: mongodb, Login function, user email: 
+2013-10-09 20:17:12 [INFO] Logged user with email
+2013-10-09 20:22:24 [INFO] Trying to log in user with email: 
+2013-10-09 20:22:24 [INFO] ns: mongodb, Login function, user email: 
+2013-10-09 20:22:24 [INFO] Logged user with email
+2013-10-09 20:24:35 [INFO] Trying to log in user with email: 
+2013-10-09 20:24:35 [INFO] ns: mongodb, Login function, user email: 
+2013-10-09 20:24:36 [INFO] Logged user with email
+2013-10-09 20:24:43 [INFO] Searching for word: 
+2013-10-09 20:33:12 [INFO] Searching for word: 
+2013-10-09 20:33:20 [INFO] Searching for word: 
+2013-10-09 20:33:27 [INFO] Searching for word: 
+2013-10-09 20:33:48 [INFO] Searching for word: 
+2013-10-09 20:34:17 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 20:34:17 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 20:34:17 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 20:34:22 [INFO] Searching for word: 
+2013-10-09 20:34:30 [INFO] Searching for word: 
+2013-10-09 20:40:57 [INFO] Searching for word: 
+2013-10-09 20:41:14 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 20:41:14 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 20:41:14 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 20:41:18 [INFO] Searching for word: New
+2013-10-09 20:41:24 [INFO] Searching for word: Tesla
+2013-10-09 20:48:33 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 20:48:33 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 20:48:33 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 20:48:39 [INFO] Searching for word: Tesla
+2013-10-09 20:49:52 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 20:49:52 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 20:49:52 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 20:49:59 [INFO] Searching for word: trr
+2013-10-09 20:50:04 [INFO] Searching for word: Tesla
+2013-10-09 21:00:22 [INFO] Searching for word: Tesla
+2013-10-09 21:00:27 [INFO] Searching for word: Tesla
+2013-10-09 21:00:33 [INFO] Searching for word: Nikola
+2013-10-09 21:00:50 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:00:50 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:00:50 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:01:29 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:01:29 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:01:29 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:01:42 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:01:42 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:01:42 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:02:08 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:02:08 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:02:08 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:02:24 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:02:24 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:02:24 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:02:30 [INFO] Searching for word: Nikola
+2013-10-09 21:03:31 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:03:32 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:03:32 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:04:17 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:04:17 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:04:17 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:04:22 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:04:22 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:04:22 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:04:35 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:04:35 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:04:35 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:07:22 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:07:22 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:07:22 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:08:27 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:08:27 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:08:27 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:08:33 [INFO] Searching for word: Tesla
+2013-10-09 21:08:38 [INFO] Searching for word: Nik
+2013-10-09 21:08:59 [INFO] Trying to log in user with email: gavrilovmilos@yahoo.com
+2013-10-09 21:08:59 [INFO] ns: mongodb, Login function, user email: gavrilovmilos@yahoo.com
+2013-10-09 21:08:59 [INFO] Logged user with emailgavrilovmilos@yahoo.com
+2013-10-09 21:09:06 [INFO] Searching for word: Tesla
+2013-10-09 21:09:13 [INFO] Searching for word: kdd
+2013-10-09 21:09:16 [INFO] Searching for word: a
+2013-10-09 21:09:24 [INFO] Searching for word: and

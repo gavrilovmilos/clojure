@@ -8,7 +8,8 @@
           [clojure.string]
           [db.mongodb :as db]
           [common.config]
-          [common.mylogger])
+          [common.mylogger]
+          [search.core :as s])
     (:require [compojure.route :as route]
               [compojure.handler :as handler]
               [clostache.parser :as clostache]
@@ -48,7 +49,7 @@
   (do (just-log "INFO" (str "Trying to log in user with email: " email)) 
     (let [logged-user (db/log-in email pass)]
       (do (just-log "INFO" (str "Logged user with email" (:_id logged-user))) 
-        (render-template "home" {:name (:surname logged-user)}) ))))
+        (render-template "home" {:greet {:name (:surname logged-user) }}) ))))
 
 (defn registration [name surname email password] 
   (try (do (just-log "INFO" (str "Trying to register user with e-mail: " email)) 
@@ -57,6 +58,9 @@
            (render-template "index" {:message "Registration success! Welcome" :name name}))
     (catch Exception e (just-error-handler (.getMessage e) "An error ocured while trying to registerer user!") )))
 
+(defn search [word]
+  (do (just-log "INFO" (str "Searching for word: " word))
+    (render-template "home" {:result (s/formatted-search word)})))
 
 (defroutes routes
   (GET "/" [] "<h2>Hello World</h2>")
@@ -65,10 +69,11 @@
   (GET "/register" [] (register-page))
   (POST "/index" [name surname email password] (registration name surname email password))
   (POST "/user-home" [email password] (logging email password))
+  (POST "/search" [search-word] (search search-word))
   (route/resources "/")
   (route/not-found "404 Page Not Found"))
 
 
 (def app (wrap-params routes))
 
-(defn server [] (run-jetty app {:port (get-config-prop :port "true")}))
+(defn server [] (future (run-jetty app {:port (get-config-prop :port "true")})))
