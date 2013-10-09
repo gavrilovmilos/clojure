@@ -17,7 +17,8 @@ Dependencies used in project:
   - Compojure for routing
   - Clostache for templating
   - Propertea for working with .properties files
-  - 
+
+  
 ## License
 
 Copyright © 2013 FIXME
