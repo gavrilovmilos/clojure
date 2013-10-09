@@ -1,6 +1,6 @@
 # JustFunctional
 
-A small project which implements user authentication and full text search algorithm. 
+A small project which implements user authentication and full text search algorithm. Project has its own logging mechanism.
 
 ## Usage
 
